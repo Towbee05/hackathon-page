@@ -454,6 +454,10 @@ video {
   margin: 0;
 }
 
+body{
+  transition: .5s linear;
+}
+
 *, ::before, ::after{
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
@@ -566,6 +570,12 @@ video {
   width: 100%;
 }
 
+@media (min-width: 600px){
+  .container{
+    max-width: 600px;
+  }
+}
+
 @media (min-width: 640px){
   .container{
     max-width: 640px;
@@ -575,6 +585,12 @@ video {
 @media (min-width: 768px){
   .container{
     max-width: 768px;
+  }
+}
+
+@media (min-width: 1000px){
+  .container{
+    max-width: 1000px;
   }
 }
 
@@ -822,20 +838,8 @@ video {
   display: none;
 }
 
-.h-5{
-  height: 1.25rem;
-}
-
-.h-10{
-  height: 2.5rem;
-}
-
-.h-20{
-  height: 5rem;
-}
-
-.h-\[70\%\]{
-  height: 70%;
+.h-0{
+  height: 0px;
 }
 
 .h-\[70vh\]{
@@ -844,6 +848,10 @@ video {
 
 .min-h-screen{
   min-height: 100vh;
+}
+
+.w-10{
+  width: 2.5rem;
 }
 
 .w-\[this-is\\\\\]{
@@ -860,10 +868,6 @@ video {
 
 .w-full{
   width: 100%;
-}
-
-.w-5{
-  width: 1.25rem;
 }
 
 .flex-shrink{
@@ -1388,14 +1392,16 @@ video {
   gap: 1rem;
 }
 
-.gap-3{
-  gap: 0.75rem;
-}
-
 .space-x-2 > :not([hidden]) ~ :not([hidden]){
   --tw-space-x-reverse: 0;
   margin-right: calc(0.5rem * var(--tw-space-x-reverse));
   margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
+.space-y-4 > :not([hidden]) ~ :not([hidden]){
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1rem * var(--tw-space-y-reverse));
 }
 
 .space-y-reverse > :not([hidden]) ~ :not([hidden]){
@@ -1837,9 +1843,8 @@ video {
   background-color: rgb(255 0 0 / var(--tw-bg-opacity));
 }
 
-.bg-black{
-  --tw-bg-opacity: 1;
-  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+.bg-custom-1-background{
+  background-image: url('/img/IMG-20240723-WA0021.jpg');
 }
 
 .decoration-slice{
@@ -1860,6 +1865,10 @@ video {
 .box-decoration-clone{
   -webkit-box-decoration-break: clone;
           box-decoration-break: clone;
+}
+
+.bg-contain{
+  background-size: contain;
 }
 
 .bg-fixed{
@@ -1889,6 +1898,10 @@ video {
 .bg-clip-text{
   -webkit-background-clip: text;
           background-clip: text;
+}
+
+.bg-custom-position{
+  background-position: top center;
 }
 
 .bg-repeat{
@@ -1952,8 +1965,8 @@ video {
      object-fit: scale-down;
 }
 
-.p-4{
-  padding: 1rem;
+.p-5{
+  padding: 1.25rem;
 }
 
 .px-1{
@@ -1969,11 +1982,6 @@ video {
 .px-5{
   padding-left: 1.25rem;
   padding-right: 1.25rem;
-}
-
-.py-4{
-  padding-top: 1rem;
-  padding-bottom: 1rem;
 }
 
 .text-left{
@@ -2032,12 +2040,17 @@ video {
   vertical-align: super;
 }
 
+.text-lg{
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
 .font-bold{
   font-weight: 700;
 }
 
-.font-medium{
-  font-weight: 500;
+.font-semibold{
+  font-weight: 600;
 }
 
 .uppercase{
@@ -2488,9 +2501,45 @@ video {
   forced-color-adjust: none;
 }
 
+.nav-toggle{
+  height: auto;
+  overflow: visible;
+}
+
+.list-item {
+  position: relative;
+  transition: 1s;
+}
+
+.list-item:hover::before{
+  position: absolute;
+  content: "";
+  height: 5px;
+  background: black;
+  margin-top: 24px;
+  border-radius: 999px;
+  animation: hover-links infinite linear;
+}
+
+@keyframes hover-links{
+  from 0%{
+    width: 0%;
+  }
+
+  to 100%{
+    width: 100%;
+  }
+}
+
 @media (min-width: 640px){
   .sm\:container{
     width: 100%;
+  }
+
+  @media (min-width: 600px){
+    .sm\:container{
+      max-width: 600px;
+    }
   }
 
   @media (min-width: 640px){
@@ -2502,6 +2551,12 @@ video {
   @media (min-width: 768px){
     .sm\:container{
       max-width: 768px;
+    }
+  }
+
+  @media (min-width: 1000px){
+    .sm\:container{
+      max-width: 1000px;
     }
   }
 
@@ -2549,6 +2604,38 @@ video {
 @media (min-width: 640px){
   .sm\:underline{
     text-decoration-line: underline;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 1000px){
+  .tablet\:flex{
+    display: flex;
+  }
+
+  .tablet\:hidden{
+    display: none;
+  }
+
+  .tablet\:h-auto{
+    height: auto;
+  }
+
+  .tablet\:w-auto{
+    width: auto;
+  }
+
+  .tablet\:gap-5{
+    gap: 1.25rem;
+  }
+
+  .tablet\:space-y-0 > :not([hidden]) ~ :not([hidden]){
+    --tw-space-y-reverse: 0;
+    margin-top: calc(0px * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(0px * var(--tw-space-y-reverse));
+  }
+
+  .tablet\:overflow-visible{
+    overflow: visible;
   }
 }
 

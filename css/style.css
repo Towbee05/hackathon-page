@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+    *{
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+    }
+    body{
+        transition: .5s linear;
+    }
+}
+
+.nav-toggle{
+    @apply h-auto overflow-visible;
+}
+
+.list-item { 
+    position: relative;
+    transition: 1s;
+}
+
+.list-item:hover::before{
+    position: absolute;
+    content: "";
+    height: 5px;
+    background: black;
+    margin-top: 24px;
+    border-radius: 999px;
+    animation: hover-links infinite linear;
+}
+
+@keyframes hover-links{
+    from 0%{width: 0%;}
+    to 100%{width: 100%;}
+}
