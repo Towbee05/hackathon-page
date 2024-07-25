@@ -67,5 +67,5 @@ addEventListener("scroll", () => {
     else{
         navBar.classList.remove("sticky-nav")
     }
-    console.log(scrollY);
+    // console.log(scrollY);
 })
