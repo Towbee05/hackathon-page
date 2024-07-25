@@ -454,9 +454,9 @@ video {
   margin: 0;
 }
 
-body{
-  transition: .5s linear;
+html{
   scroll-behavior: smooth;
+  transition: 2s linear;
 }
 
 *, ::before, ::after{
@@ -1090,6 +1090,10 @@ body{
   list-style-position: outside;
 }
 
+.list-image-checked{
+  list-style-image: url('/img/circle-check-regular.svg');
+}
+
 .appearance-none{
   -webkit-appearance: none;
      -moz-appearance: none;
@@ -1219,6 +1223,10 @@ body{
 
 .grid-flow-col-dense{
   grid-auto-flow: column dense;
+}
+
+.grid-cols-2{
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .grid-rows-2{
@@ -2023,6 +2031,10 @@ body{
   padding: 3rem;
 }
 
+.p-4{
+  padding: 1rem;
+}
+
 .px-1{
   padding-left: 0.25rem;
   padding-right: 0.25rem;
@@ -2045,6 +2057,14 @@ body{
 
 .pt-4{
   padding-top: 1rem;
+}
+
+.pl-4{
+  padding-left: 1rem;
+}
+
+.pl-5{
+  padding-left: 1.25rem;
 }
 
 .text-left{
@@ -2108,6 +2128,16 @@ body{
   line-height: 2.25rem;
 }
 
+.text-4xl{
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
+.text-base{
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
 .text-lg{
   font-size: 1.125rem;
   line-height: 1.75rem;
@@ -2124,6 +2154,14 @@ body{
 
 .font-bold{
   font-weight: 700;
+}
+
+.font-light{
+  font-weight: 300;
+}
+
+.font-medium{
+  font-weight: 500;
 }
 
 .font-semibold{
@@ -2648,45 +2686,23 @@ body{
 .about-header::before{
   position: absolute;
   content: "";
+  width: 1.5rem;
+  height: 2px;
   margin-left: 4.5em;
   margin-top: 4px;
   border-radius: 999px;
   background: #062F71;
-  width: 1rem
-}
-
-@media (min-width: 830px) and (max-width: 1000px){
-  .about-header::before{
-    width: 1.25rem;
-  }
-}
-
-@media (min-width: 1000px){
-  .about-header::before{
-    width: 1.5rem;
-  }
 }
 
 .about-header::after{
   position: absolute;
   content: "";
+  width: 3rem;
+  height: 2px;
   margin-left: 1em;
   margin-top: 1em;
   border-radius: 999px;
   background: #062F71;
-  width: 1.25rem
-}
-
-@media (min-width: 830px) and (max-width: 1000px){
-  .about-header::after{
-    width: 1.5rem;
-  }
-}
-
-@media (min-width: 1000px){
-  .about-header::after{
-    width: 1.75rem;
-  }
 }
 
 @keyframes hoverLinks{
@@ -2745,11 +2761,6 @@ body{
       max-width: 1536px;
     }
   }
-}
-
-.before\:w-4::before{
-  content: var(--tw-content);
-  width: 1rem;
 }
 
 .hover\:cursor-pointer:hover{
@@ -2849,11 +2860,6 @@ body{
     font-size: 1.125rem;
     line-height: 1.75rem;
   }
-
-  .tablet\:after\:w-5::after{
-    content: var(--tw-content);
-    width: 1.25rem;
-  }
 }
 
 @media (min-width: 1000px){
@@ -2920,11 +2926,6 @@ body{
   .laptop\:text-xl{
     font-size: 1.25rem;
     line-height: 1.75rem;
-  }
-
-  .laptop\:after\:w-6::after{
-    content: var(--tw-content);
-    width: 1.5rem;
   }
 }
 

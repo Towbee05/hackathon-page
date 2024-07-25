@@ -10,9 +10,9 @@
         padding: 0;
         margin: 0;
     }
-    body{
-        transition: .5s linear;
+    html{
         scroll-behavior: smooth;
+        transition: 2s linear;
     }
 }
 

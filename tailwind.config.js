@@ -29,6 +29,9 @@ module.exports = {
       },
       backgroundPosition: {
         "custom-position" : "top center"
+      },
+      listStyleImage:{
+        checked : "url('/img/circle-check-regular.svg')"
       }
     },
   },
