@@ -1095,7 +1095,7 @@ html{
 }
 
 .list-image-checked{
-  list-style-image: url("/img/circle-check-regular.svg");
+  list-style-image: url("../img/circle-check-regular.svg");
 }
 
 .appearance-none{
