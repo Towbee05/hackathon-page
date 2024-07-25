@@ -31,10 +31,9 @@ module.exports = {
         "custom-position" : "top center"
       },
       listStyleImage:{
-        checked : "url('/img/circle-check-regular.svg')"
+        checked : "url('./img/circle-check-regular.svg')"
       }
     },
   },
   plugins: [],
 }
-

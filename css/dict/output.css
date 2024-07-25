@@ -1433,12 +1433,12 @@ html{
   gap: 1rem;
 }
 
-.gap-8{
-  gap: 2rem;
-}
-
 .gap-5{
   gap: 1.25rem;
+}
+
+.gap-8{
+  gap: 2rem;
 }
 
 .space-x-2 > :not([hidden]) ~ :not([hidden]){
@@ -2834,10 +2834,6 @@ html{
     max-width: 800px;
   }
 
-  .tablet\:max-w-\[700px\]{
-    max-width: 700px;
-  }
-
   .tablet\:grid-cols-2{
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -2905,12 +2901,12 @@ html{
     max-width: 1000px;
   }
 
-  .laptop\:max-w-\[600px\]{
-    max-width: 600px;
-  }
-
   .laptop\:max-w-\[1200px\]{
     max-width: 1200px;
+  }
+
+  .laptop\:max-w-\[600px\]{
+    max-width: 600px;
   }
 
   .laptop\:grid-cols-2{
