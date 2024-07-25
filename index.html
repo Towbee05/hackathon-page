@@ -10,50 +10,72 @@
 </head>
 <body>
     <main class="min-h-screen w-full ">
-        <nav class="p-5 tablet:flex justify-between">
-            <!-- header -->
-            <div class="flex justify-between items-center">
-            <div class="space-x-2">
-                <img src="./img/IMG-20240720-WA0058.jpg" alt ="company logo" class="w-10 inline"/>
-                <p class="inline"> JEW TECH </p>
-            </div>
-            <div class="flex gap-4 tablet:hidden">
-                <span>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="30" height="30" class="open-nav"><path d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM64 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L96 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"/></svg>
-                </span>
-                <span>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="30" height="30" class="close-nav"><path d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c-9.4 9.4-9.4 24.6 0 33.9l47 47-47 47c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l47-47 47 47c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-47-47 47-47c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-47 47-47-47c-9.4-9.4-24.6-9.4-33.9 0z"/></svg>
-                </span>
-            </div>
-            </div>
-            <!-- End of header -->
-            <!-- Links -->
-            <ul class="list-container uppercase font-semibold text-lg tablet:flex tablet:gap-5 items-center w-full text-center space-y-4 tablet:space-y-0 tablet:w-auto h-0 tablet:h-auto overflow-hidden tablet:overflow-visible">
-                <li class="list-item">
-                    <a href="#" class="hyperlinks">
-                        home
-                    </a>
-                </li>
-                <li class="list-item">
-                    <a href="#" class="hyperlinks">
-                        about
-                    </a>
-                </li>
-                <li class="list-item">
-                    <a href="#" class="hyperlinks">
-                        events
-                    </a>
-                </li>
-                <li class="list-item">
-                    <a href="#" class="hyperlinks">
-                        sponsor
-                    </a>
-                </li>
-            </ul>
-            <!-- End of links -->
-        </nav>
-        <div class="bg-custom-1-background bg-no-repeat bg-custom-position bg-contain w-full h-[70vh]">
+        <div class="h-screen bg-no-repeat bg-custom-background-color bg-cover bg-scroll bg-center">
+            <nav class="">
+                <div class="tablet:flex laptop:flex justify-between items-start nav-bar">
+                    <!-- header -->
+                    <div class="flex justify-between items-center p-4">
+                        <div class="w-full flex gap-2 items-center">
+                            <img src="./img/IMG-20240720-WA0058.jpg" alt ="company logo" class="w-10  "/>
+                            <p class=""> JEW TECH </p>
+                        </div>
+                        <div class="flex gap-4 tablet:hidden laptop:hidden">
+                            <span>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="30" height="30" class="open-nav"><path d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM64 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L96 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"/></svg>
+                            </span>
+                            <span>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="30" height="30" class="close-nav"><path d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c-9.4 9.4-9.4 24.6 0 33.9l47 47-47 47c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l47-47 47 47c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-47-47 47-47c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-47 47-47-47c-9.4-9.4-24.6-9.4-33.9 0z"/></svg>
+                            </span>
+                        </div>
+                    </div>
+                    <!-- End of header -->
+                    <!-- Links -->
+                    <ul class="list-container uppercase font-semibold text-lg flex justify-center
+                    tablet:gap-5 tablet:h-auto tablet:space-y-0 tablet:w-auto tablet:overflow-visible 
+                    laptop:gap-5 laptop:h-auto laptop:space-y-0 laptop:w-auto laptop:overflow-visible 
+                    items-center w-full text-center space-y-4 h-0 overflow-hidden justify-self-start">
+                        <li class="list-item">
+                            <a href="#" class="hyperlinks">
+                                home
+                            </a>
+                        </li>
+                        <li class="list-item">
+                            <a href="#" class="hyperlinks">
+                                about
+                            </a>
+                        </li>
+                        <li class="list-item">
+                            <a href="#" class="hyperlinks">
+                                events
+                            </a>
+                        </li>
+                        <li class="list-item">
+                            <a href="#" class="hyperlinks">
+                                sponsor
+                            </a>
+                        </li>
+                        <li class="list-item bg-blue-500">
+                            <a href="#" class="hyperlinks p-0 space-x-2">
+                                <p>
+                                    register now
+                                </p>
+                                <p>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="10" height="10"><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg>
+                                </p>
+                            </a>
+
+                        </li>
+                    </ul>
+                    <!-- End of links -->
+                </div>
+            </nav>
         </div>
+        <!-- <div class="page-content">    
+            <div class="bg-custom-1-background bg-custom-linear bg-no-repeat bg-custom-position bg-cover w-full h-[70vh]">
+            </div>
+            <div class="h-[2000px]">
+            </div>
+        </div> -->
     </main>
     <script src="./js/app.js"></script>
 </body>

@@ -5,9 +5,11 @@ const getElement = (element) => {
     return returnedElement;
 };
 // Select items
+const navBar = getElement(".nav-bar");
+// const pageContent = getElement(".page-content");
 const openNav = getElement(".open-nav");
 const closeNav = getElement(".close-nav");
-const listContainer = getElement(".list-container")
+const listContainer = getElement(".list-container");
 
 // Toggle nav
 openNav.addEventListener("click", () => {
@@ -24,4 +26,18 @@ closeNav.addEventListener("click", () => {
 
 addEventListener("DOMContentLoaded", () => {
     closeNav.classList.add("hidden");
+});
+
+// Fixed nav;
+
+const navBarHeight = navBar.getBoundingClientRect().height;
+addEventListener("scroll", () => {
+    if (pageYOffset > navBarHeight){
+        // pageContent.style.paddingTop = `${navBarHeight}px`
+        navBar.classList.add("sticky-nav");
+    }
+    else{
+        navBar.classList.remove("sticky-nav")
+        // pageContent.style.paddingTop = `0px`;
+    }
 })

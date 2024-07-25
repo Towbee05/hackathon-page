@@ -5,9 +5,15 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors:{
+        // #191714 #2234AE
+        // #009FC2 #0D0A0B
+        "custom-linear" : "linear-gradient(to bottom right, #121C84, #8278DA);",
+        "custom-background-color" : "linear-gradient(to right, #191714 90%, #2234AE 10%)"
+      },
       screens:{
         "tablet" : {
-          "min" : "600px",
+          "min" : "830px",
           "max" : "1000px"
         },
         "laptop" : {
@@ -15,7 +21,9 @@ module.exports = {
         }
       },
       backgroundImage: {
-        "custom-1-background" : "url('/img/IMG-20240723-WA0021.jpg')"
+        "custom-1-background" : "url('/img/IMG-20240723-WA0021.jpg')",
+        "custom-2-background" : "url('/img/IMG-20240720-WA0059.jpg')",
+        "custom-3-background" : "url('/img/IMG-20240720-WA0060.jpg')",
       },
       backgroundPosition: {
         "custom-position" : "top center"
