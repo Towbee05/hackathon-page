@@ -17,10 +17,14 @@
 }
 
 .nav-toggle{
-    @apply h-auto overflow-visible;
+    @apply h-auto overflow-visible flex flex-col pb-4;
 }
 .nav-toggle .list-item{
-    @apply p-0
+    @apply p-0 leading-10
+}
+
+.nav-toggle .register{
+    @apply px-4 py-2
 }
 
 .sticky-nav{
@@ -34,7 +38,7 @@
     justify-content: center;
     align-items: center;
     line-height: 56px;
-    /* padding: 16px; */
+    padding: 16px;
 }
 
 .hyperlinks { 
@@ -43,7 +47,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    /* padding: 16px; */
+    /* padding: 0px 16px; */
 }
 
 .hyperlinks:hover::before{
@@ -57,7 +61,37 @@
     animation: hoverLinks .8s linear 1
 }
 
+#header-body{
+    height: calc(85vh - 72.5px);
+}
+
+.about-header{
+    position: relative;
+    z-index: -1;
+}
+.about-header::before{
+    position: absolute;
+    content: "";
+    width: 1.5rem;
+    height: 2px;
+    margin-left: 4.5em;
+    margin-top: 4px;
+    border-radius: 999px;
+    background: #062F71;
+}
+.about-header::after{
+    position: absolute;
+    content: "";
+    width: 3rem;
+    height: 2px;
+    margin-left: 1em;
+    margin-top: 1em;
+    border-radius: 999px;
+    background: #062F71;
+}
+
 @keyframes hoverLinks{
     0% {width: 0%;}
     100% {width: 100%;}
 }
+

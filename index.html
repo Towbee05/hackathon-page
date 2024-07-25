@@ -9,15 +9,16 @@
     <link rel="shortcut icon" href="./img/favicon-32x32.png" type="image/x-icon">
 </head>
 <body>
-    <main class="min-h-screen w-full ">
-        <div class="h-screen bg-no-repeat bg-custom-background-color bg-cover bg-scroll bg-center">
-            <nav class="">
+    <main class="min-h-screen w-full">
+        <header class="w-full h-[85vh] bg-no-repeat bg-right bg-contain bg-black bg-custom-1-background " id="home">
+            <!-- Navbar container -->
+            <nav class="h-auto w-full bg-white ">
                 <div class="tablet:flex laptop:flex justify-between items-start nav-bar">
                     <!-- header -->
-                    <div class="flex justify-between items-center p-4">
+                    <div class="flex justify-between items-center pt-4 px-4">
                         <div class="w-full flex gap-2 items-center">
                             <img src="./img/IMG-20240720-WA0058.jpg" alt ="company logo" class="w-10  "/>
-                            <p class=""> JEW TECH </p>
+                            <p class="font-black"> JEW <span> TECH </span></p>
                         </div>
                         <div class="flex gap-4 tablet:hidden laptop:hidden">
                             <span>
@@ -35,27 +36,27 @@
                     laptop:gap-5 laptop:h-auto laptop:space-y-0 laptop:w-auto laptop:overflow-visible 
                     items-center w-full text-center space-y-4 h-0 overflow-hidden justify-self-start">
                         <li class="list-item">
-                            <a href="#" class="hyperlinks">
+                            <a href="#home" class="hyperlinks">
                                 home
                             </a>
                         </li>
                         <li class="list-item">
-                            <a href="#" class="hyperlinks">
+                            <a href="#about" class="hyperlinks">
                                 about
                             </a>
                         </li>
                         <li class="list-item">
-                            <a href="#" class="hyperlinks">
+                            <a href="#events" class="hyperlinks">
                                 events
                             </a>
                         </li>
                         <li class="list-item">
-                            <a href="#" class="hyperlinks">
+                            <a href="#sponsors" class="hyperlinks">
                                 sponsor
                             </a>
                         </li>
-                        <li class="list-item bg-blue-500">
-                            <a href="#" class="hyperlinks p-0 space-x-2">
+                        <li class="list-item bg-blue-500 hover:cursor-pointer register">
+                            <a href="#register" class="hyperlinks p-0 space-x-2">
                                 <p>
                                     register now
                                 </p>
@@ -69,13 +70,35 @@
                     <!-- End of links -->
                 </div>
             </nav>
-        </div>
-        <!-- <div class="page-content">    
-            <div class="bg-custom-1-background bg-custom-linear bg-no-repeat bg-custom-position bg-cover w-full h-[70vh]">
+            <!-- End of navbar -->
+             <div class="max-w-[350px] tablet:max-w-[450px] laptop:max-w-[600px] leading-5 text-white flex justify-center items-center" id="header-body">
+                <p class="text-3xl tablet:text-[48px] laptop:text-[56px] font-black"> JOSTUM TECHNOLOGY </p>
+             </div>
+        </header>
+        <!-- Page content -->
+        <main class="web-body p-12 space-y-12 
+                    tablet:pt-14 tablet:space-y-14
+                    laptop:pt-16 laptop:space-y-16">
+            <div id="about" class="flex justify-center items-center">
+                <div class="w-full grid grid-rows-2 gap-10 max-w-[400px]
+                            tablet:grid-cols-2 tablet:grid-rows-1 tablet:max-w-[800px]
+                            laptop:grid-cols-2 laptop:grid-rows-1 laptop:max-w-[1000px]">
+                    <article>
+                        <img src="./img/IMG-20240720-WA0059.jpg" alt="">
+                    </article>
+                    <article class="text-sm tablet:text-lg laptop:text-xl">
+                        <h1 class="w-full text-center font-bold about-header">ABOUT</h1>
+                    </article>
+                </div>
+
             </div>
-            <div class="h-[2000px]">
+            <div class="h-[2000px]" id="events">
+                <h1>Events</h1>
             </div>
-        </div> -->
+            <div class="bg-black h-[2000px] text-white" id="sponsors">
+                <h1>SPONSORS</h1>
+            </div>
+        </main>
     </main>
     <script src="./js/app.js"></script>
 </body>

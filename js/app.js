@@ -6,10 +6,43 @@ const getElement = (element) => {
 };
 // Select items
 const navBar = getElement(".nav-bar");
-// const pageContent = getElement(".page-content");
 const openNav = getElement(".open-nav");
 const closeNav = getElement(".close-nav");
 const listContainer = getElement(".list-container");
+const links = document.querySelectorAll(".hyperlinks");
+
+
+// Fixed nav;
+
+const navBarHeight = navBar.getBoundingClientRect().height;
+// Hide navbar when link is clicked
+links.forEach((link)=> {
+    link.addEventListener("click", (e) => { 
+        e.preventDefault();
+        const navBarHeight = navBar.getBoundingClientRect().height;
+        const currentElement = e.currentTarget.getAttribute("href").slice(1);
+        const elementTarget = getElement(`#${currentElement}`)
+        let linkContainerHeight = listContainer.getBoundingClientRect().height;
+        const distancefromTop = elementTarget.offsetTop;
+        let scrollHeight = distancefromTop - navBarHeight;
+        
+        if (!navBar.classList.contains("sticky-nav")) {
+            scrollHeight = scrollHeight ;
+        }
+        
+        if(navBarHeight > 90) {
+            scrollHeight = scrollHeight + linkContainerHeight
+            console.log(scrollHeight);
+        }
+        
+        scrollTo({ top: scrollHeight, left:0 });
+        console.log(linkContainerHeight);
+        listContainer.classList.remove("nav-toggle");
+        openNav.classList.remove("hidden");
+        closeNav.classList.add("hidden");
+
+    })
+})
 
 // Toggle nav
 openNav.addEventListener("click", () => {
@@ -27,17 +60,12 @@ closeNav.addEventListener("click", () => {
 addEventListener("DOMContentLoaded", () => {
     closeNav.classList.add("hidden");
 });
-
-// Fixed nav;
-
-const navBarHeight = navBar.getBoundingClientRect().height;
 addEventListener("scroll", () => {
     if (pageYOffset > navBarHeight){
-        // pageContent.style.paddingTop = `${navBarHeight}px`
         navBar.classList.add("sticky-nav");
     }
     else{
         navBar.classList.remove("sticky-nav")
-        // pageContent.style.paddingTop = `0px`;
     }
+    console.log(scrollY);
 })
