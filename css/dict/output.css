@@ -740,6 +740,10 @@ html{
   margin-top: 0.5rem;
 }
 
+.mt-8{
+  margin-top: 2rem;
+}
+
 .box-border{
   box-sizing: border-box;
 }
@@ -859,6 +863,14 @@ html{
   height: 100%;
 }
 
+.h-32{
+  height: 8rem;
+}
+
+.h-40{
+  height: 10rem;
+}
+
 .min-h-screen{
   min-height: 100vh;
 }
@@ -883,6 +895,10 @@ html{
   width: 100%;
 }
 
+.max-w-\[1440px\]{
+  max-width: 1440px;
+}
+
 .max-w-\[350px\]{
   max-width: 350px;
 }
@@ -891,8 +907,20 @@ html{
   max-width: 400px;
 }
 
-.max-w-\[1440px\]{
-  max-width: 1440px;
+.max-w-\[500px\]{
+  max-width: 500px;
+}
+
+.max-w-\[600px\]{
+  max-width: 600px;
+}
+
+.max-w-\[800px\]{
+  max-width: 800px;
+}
+
+.max-w-\[900px\]{
+  max-width: 900px;
 }
 
 .flex-shrink{
@@ -1231,6 +1259,10 @@ html{
 
 .grid-flow-col-dense{
   grid-auto-flow: column dense;
+}
+
+.grid-cols-1{
+  grid-template-columns: repeat(1, minmax(0, 1fr));
 }
 
 .grid-cols-2{
@@ -2168,6 +2200,10 @@ html{
   line-height: 1.25rem;
 }
 
+.text-\[40px\]{
+  font-size: 40px;
+}
+
 .font-black{
   font-weight: 900;
 }
@@ -2884,6 +2920,15 @@ html{
     font-size: 1.125rem;
     line-height: 1.75rem;
   }
+
+  .tablet\:text-\[40px\]{
+    font-size: 40px;
+  }
+
+  .tablet\:text-5xl{
+    font-size: 3rem;
+    line-height: 1;
+  }
 }
 
 @media (min-width: 1000px){
@@ -2923,6 +2968,14 @@ html{
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .laptop\:grid-cols-3{
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .laptop\:grid-cols-4{
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
   .laptop\:grid-rows-1{
     grid-template-rows: repeat(1, minmax(0, 1fr));
   }
@@ -2958,6 +3011,11 @@ html{
   .laptop\:text-xl{
     font-size: 1.25rem;
     line-height: 1.75rem;
+  }
+
+  .laptop\:text-6xl{
+    font-size: 3.75rem;
+    line-height: 1;
   }
 }
 
