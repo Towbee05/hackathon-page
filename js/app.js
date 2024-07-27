@@ -10,7 +10,7 @@ const openNav = getElement(".open-nav");
 const closeNav = getElement(".close-nav");
 const listContainer = getElement(".list-container");
 const links = document.querySelectorAll(".hyperlinks");
-
+const getBackToTopLink = getElement(".back-to-top");
 
 // Fixed nav;
 
@@ -67,5 +67,11 @@ addEventListener("scroll", () => {
     else{
         navBar.classList.remove("sticky-nav")
     }
-    // console.log(scrollY);
+
+    if (pageYOffset >= 480 ) getBackToTopLink.classList.remove("hidden");
+    else getBackToTopLink.classList.add("hidden");
+});
+
+getBackToTopLink.addEventListener("click", () => {
+    scrollTo({top: 0, left:0});
 })

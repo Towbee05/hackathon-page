@@ -33,6 +33,19 @@
     width: 100%;
 }
 
+.open-nav, .close-nav, .back-to-top{
+    cursor: pointer;
+    transition: .7s;
+}
+.close-nav:hover{
+    transform: scale(1.2);
+}
+.open-nav:hover{
+    transform: rotate(90deg);
+}
+.back-to-top:hover{
+    transform: scale(1.1);
+}
 .list-item{
     display: flex;
     justify-content: center;
