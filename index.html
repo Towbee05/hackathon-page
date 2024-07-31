@@ -14,7 +14,6 @@
             <!-- Navbar container -->
             <nav class="h-auto w-full bg-white ">
                 <div class="tablet:flex laptop:flex justify-between items-start nav-bar">
-                    <!-- header -->
                     <div class="flex justify-between items-center pt-4 px-4">
                         <div class="w-full flex gap-2 items-center">
                             <img src="./img/IMG-20240720-WA0058.jpg" alt ="company logo" class="w-10  "/>
@@ -29,7 +28,6 @@
                             </span>
                         </div>
                     </div>
-                    <!-- End of header -->
                     <!-- Links -->
                     <ul class="list-container uppercase font-semibold text-lg flex justify-center
                     tablet:gap-5 tablet:h-auto tablet:space-y-0 tablet:w-auto tablet:overflow-visible 
@@ -71,9 +69,8 @@
                 </div>
             </nav>
             <!-- End of navbar -->
-             <div class="max-w-[350px] tablet:max-w-[450px] laptop:max-w-[600px] leading-5 text-white flex justify-center items-center" id="header-body">
-                <p class="text-3xl tablet:text-[48px] laptop:text-[56px] font-black"> JOSTUM TECHNOLOGY </p>
-             </div>
+            <div class="max-w-[350px] tablet:max-w-[450px] laptop:max-w-[600px] leading-5 text-white flex justify-center items-center" id="header-body">
+            </div>
         </header>
         <!-- Page content -->
         <main class="web-body p-12 space-y-12 mb-10 
@@ -83,12 +80,12 @@
                 <div class="w-full grid grid-rows-2 gap-10 max-w-[400px]
                             tablet:grid-cols-2 tablet:grid-rows-1 tablet:max-w-[800px]
                             laptop:grid-cols-2 laptop:grid-rows-1 laptop:max-w-[1000px]">
-                    <article>
+                    <div>
                         <img src="./img/IMG-20240720-WA0059.jpg" alt="">
-                    </article>
-                    <article class="text-sm tablet:text-lg laptop:text-xl">
+                    </div>
+                    <div class="text-sm tablet:text-lg laptop:text-xl">
                         <h1 class="w-full text-center font-bold about-header">ABOUT</h1>
-                    </article>
+                    </div>
                 </div>
 
             </section>
@@ -145,8 +142,8 @@
                                 </div>
                             </article>
                         </div>
-                        <div>
-                            <img src="./img/IMG-20240723-WA0021.jpg" alt="diagrammatic representation of our aim" class="h-full">
+                        <div class="grid place-items-center">
+                            <img src="./img/IMG-20240723-WA0021.jpg" alt="diagrammatic representation of our aim" class="w-full">
                         </div>
                    </article>
                 </div>
@@ -203,17 +200,45 @@
             </section>
 
             <section id="register">
-                <h1>Register with us</h1>
-                <div class="w-40 ">
-                    <img src="./img/qr-code.png" alt="qr code for registration link" class="bg-red-400">
-                </div>
             </section>
-            <div class="back-to-top fixed top-[80%] left-[80%] tablet:left-[90%] laptop:left-[95%] mr-5 p-3 bg-custom-background rounded-full hidden"> 
+            
+            <button class="back-to-top fixed top-[80%] left-[80%] tablet:left-[90%] laptop:left-[95%] mr-5 p-3 bg-custom-background rounded-full hidden focus-within:border-white"> 
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" width="20" height="20"><path d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2 160 448c0 17.7 14.3 32 32 32s32-14.3 32-32l0-306.7L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"/></svg>
-            </div>
+            </button>
         </main>
-        <footer class="h-40 bg-black bottom-0 mt-10 w-full">
-            <p> Hello, world </p>
+        <footer class="bg-black bg-opacity-50 text-white h-52 bottom-0 mt-10 w-full flex items-center px-10">
+            <div class="space-y-5">
+                <h1 class="font-bold text-lg"> Get through to us </h1>
+                <ul>
+                    <li>
+                        <a href="#">
+
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            
+                        </a>
+                    </li>
+                </ul>
+            <div>
+
+            </div>
         </footer>
     </div>
     <script src="./js/app.js"></script>
