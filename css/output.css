@@ -692,6 +692,14 @@ html{
   left: 80%;
 }
 
+.top-\[90\%\]{
+  top: 90%;
+}
+
+.top-\[70\%\]{
+  top: 70%;
+}
+
 .isolate{
   isolation: isolate;
 }
@@ -1267,6 +1275,10 @@ html{
 
 .grid-cols-footer-grid{
   grid-template-columns: 40% 20% 40%;
+}
+
+.grid-cols-3{
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .grid-rows-2{
@@ -3014,6 +3026,10 @@ html{
     left: 95%;
   }
 
+  .laptop\:block{
+    display: block;
+  }
+
   .laptop\:flex{
     display: flex;
   }
@@ -3060,6 +3076,10 @@ html{
 
   .laptop\:grid-rows-1{
     grid-template-rows: repeat(1, minmax(0, 1fr));
+  }
+
+  .laptop\:content-center{
+    align-content: center;
   }
 
   .laptop\:gap-5{
