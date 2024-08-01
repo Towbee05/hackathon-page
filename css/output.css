@@ -3074,6 +3074,10 @@ html{
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
+  .laptop\:grid-cols-3{
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
   .laptop\:grid-rows-1{
     grid-template-rows: repeat(1, minmax(0, 1fr));
   }
