@@ -32,6 +32,9 @@ module.exports = {
       },
       listStyleImage:{
         checked : 'url("/img/circle-check-regular.svg")'
+      },
+      gridTemplateColumns: {
+        "footer-grid" : "40% 20% 40%"
       }
     },
   },
